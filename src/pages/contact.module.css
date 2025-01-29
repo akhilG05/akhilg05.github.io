@@ -1,0 +1,51 @@
+.contactContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-card-border-radius);
+  background: var(--ifm-background-surface-color);
+}
+
+.emailReveal {
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-card-border-radius);
+  text-align: center;
+}
+
+.captchaContainer input {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  width: 200px;
+}
+
+.successMessage {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--ifm-color-success-lightest);
+  border-radius: var(--ifm-card-border-radius);
+  text-align: center;
+}

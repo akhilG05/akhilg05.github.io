@@ -1,0 +1,230 @@
+.pageTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: var(--ifm-h1-font-size);
+  color: var(--ifm-heading-color);
+}
+
+.tabContainer {
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.tabList {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  scrollbar-width: thin;
+  scrollbar-color: var(--ifm-color-emphasis-300) transparent;
+}
+
+.tabList::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tabList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tabList::-webkit-scrollbar-thumb {
+  background-color: var(--ifm-color-emphasis-300);
+  border-radius: 3px;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: var(--ifm-color-emphasis-700);
+  cursor: pointer;
+  font-weight: var(--ifm-font-weight-semibold);
+  white-space: nowrap;
+  transition: all var(--ifm-transition-fast);
+}
+
+.tabSelected {
+  color: var(--ifm-color-primary);
+  border-bottom: 2px solid var(--ifm-color-primary);
+  margin-bottom: -2px;
+}
+
+.tabPanels {
+  margin-top: 2rem;
+}
+
+.projectCard {
+  background: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  overflow: hidden;
+  transition: opacity var(--ifm-transition-fast) ease-in-out,
+              transform var(--ifm-transition-fast) ease-in-out;
+}
+
+.activePanel {
+  display: block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.inactivePanel {
+  display: none;
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--ifm-transition-fast) ease;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--ifm-transition-fast);
+  z-index: 2;
+}
+
+.carouselButton:hover {
+  background: var(--ifm-color-emphasis-300);
+}
+
+.prevButton {
+  left: 1rem;
+}
+
+.nextButton {
+  right: 1rem;
+}
+
+.imageDots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ifm-color-emphasis-500);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all var(--ifm-transition-fast);
+}
+
+.activeDot {
+  background: var(--ifm-color-primary);
+  transform: scale(1.2);
+}
+
+.projectContent {
+  padding: 1.5rem;
+}
+
+.period {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-font-color-base);
+}
+
+.highlights {
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.highlights h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.highlights li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--ifm-color-primary);
+}
+
+.tech {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: calc(var(--ifm-h1-font-size) * 0.8);
+    margin-bottom: 2rem;
+  }
+
+  .tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .carouselButton {
+    width: 32px;
+    height: 32px;
+  }
+}

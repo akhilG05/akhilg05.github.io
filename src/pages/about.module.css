@@ -1,0 +1,417 @@
+/* src/pages/about.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.heroSection {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.contentColumn {
+  padding-right: 2rem;
+}
+
+.contentColumn h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.roleTitle {
+  font-size: 1.25rem;
+  color: #666;
+  margin: 0 0 1.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
+}
+
+.imageColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageWrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep all your existing CSS for cards, education, experience, and skills */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.educationContent {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.experienceGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.experienceItem {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.experienceHeader {
+  margin-bottom: 1rem;
+}
+
+.company {
+  color: #666;
+  margin: 0.25rem 0;
+}
+
+.period {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skillItem {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.skillItem h3 {
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .contentColumn {
+    padding-right: 0;
+  }
+
+  .imageWrapper {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+}
+
+.skillsContainer {
+  display: grid;
+  gap: 2rem;
+}
+
+.skillCategory {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.skillCategory:hover {
+  transform: translateY(-2px);
+}
+
+.categoryHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 0.75rem;
+}
+
+.categoryIcon {
+  font-size: 1.5rem;
+}
+
+.categoryHeader h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.skillGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skillBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.skillBadge:hover {
+  background: #f0f0f0;
+}
+
+.skillName {
+  color: #333;
+  font-weight: 500;
+}
+
+.skillLevel {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .skillsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .skillsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .skillGrid {
+    gap: 0.5rem;
+  }
+  
+  .skillBadge {
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Add these styles to your about.module.css */
+
+.logoEntry {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+
+
+.instituteLogo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.entryContent {
+  flex-grow: 1;
+}
+
+.educationContent {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+}
+
+.experienceItem {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.experienceItem:hover {
+  transform: translateY(-2px);
+}
+
+.experienceHeader h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .logoEntry {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .logoContainer {
+    width: 60px;
+    height: 60px;
+  }
+
+  .entryContent {
+    width: 100%;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.heroSection {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-card-shadow);
+}
+
+.contentColumn {
+  padding-right: 2rem;
+}
+
+.contentColumn h1 {
+  font-size: 2.5rem;
+  color: var(--ifm-heading-color);
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.roleTitle {
+  font-size: 1.25rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0 0 1.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+  margin: 0;
+}
+
+.card {
+  background: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--ifm-card-shadow);
+}
+
+.card h2 {
+  color: var(--ifm-heading-color);
+  margin-bottom: 1.5rem;
+}
+
+.experienceGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.experienceItem {
+  background: var(--ifm-background-surface-color);
+  padding: 1.5rem;
+  border-radius: var(--ifm-card-border-radius);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experienceItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ifm-card-shadow);
+}
+
+.logoContainer {
+  flex-shrink: 0;
+  width: 13vh;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 0.5rem;
+  box-shadow: var(--ifm-card-shadow);
+}
+
+.logoContainer {
+  flex-shrink: 0;
+  width: 14vh;
+  height: 14vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.company {
+  color: var(--ifm-color-emphasis-700);
+  margin: 0.25rem 0;
+}
+
+.period {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}
+
+.skillCategory {
+  background: var(--ifm-card-background-color);
+  border-radius: var(--ifm-card-border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--ifm-card-shadow);
+}
+
+.skillBadge {
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+}
+
+.advanced {
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darker);
+}
+
+.intermediate {
+  background: var(--ifm-color-success-lightest);
+  color: var(--ifm-color-success-darker);
+} 

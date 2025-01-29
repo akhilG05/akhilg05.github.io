@@ -1,0 +1,37 @@
+.publicationsContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.publicationCard {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-card-border-radius);
+  background: var(--ifm-background-surface-color);
+}
+
+.pubType {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  background: var(--ifm-color-primary);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.pubTitle {
+  margin-bottom: 0.5rem;
+}
+
+.authors {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 0.5rem;
+}
+
+.abstract {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
