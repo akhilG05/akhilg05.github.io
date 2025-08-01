@@ -6,44 +6,102 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #3f3d55;
+  --ifm-color-primary-dark: #343246;
+  --ifm-color-primary-darker: #292837;
+  --ifm-color-primary-darkest: #1e1d28;
+  --ifm-color-primary-light: #4a4864;
+  --ifm-color-primary-lighter: #555273;
+  --ifm-color-primary-lightest: #605d82;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #c1c0d1;
+  --ifm-color-primary-dark: #b2b1c6;
+  --ifm-color-primary-darker: #a4a3bb;
+  --ifm-color-primary-darkest: #9594b1;
+  --ifm-color-primary-light: #c1c0d1;
+  --ifm-color-primary-lighter: #dedde7;
+  --ifm-color-primary-lightest: #edecf1;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-
-.footer {
+/* A simple row with two items spaced apart */
+.custom-footer-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  /* optional: match Docusaurus default spacing */
+  max-width: 1000px; /* or whatever suits your layout */
+  margin: 0 auto;    /* center container horizontally */
+  padding: 1rem;
 }
 
-.footer-left {
-  text-align: left;
+/* On smaller screens, stack them vertically */
+@media (max-width: 768px) {
+  .custom-footer-row {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left,
+  .footer-right {
+    margin: 0.3rem 0;
+  }
 }
 
-.footer-center {
-  text-align: center;
-  flex-grow: 1;
+/* 1) Reduce overall footer padding */
+.footer--dark {
+  padding: 0.5rem 1rem !important; /* Adjust as needed */
+  min-height: 0.5cm !important;
+}
+
+/* Target the Docusaurus footer links container */
+.footer__links {
+  display: flex;
+  justify-content: space-between; /* Spread columns left & right */
+}
+
+/* Each links[] object is rendered as a column, typically .col.col--6 etc. */
+.footer__links .col {
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* or "flex-start"/"flex-end" as needed */
+}
+
+/* Make the first column align left, second column align right */
+.footer__links .col:nth-child(1) {
+  justify-content: flex-start;
+}
+.footer__links .col:nth-child(2) {
+  justify-content: flex-end;
+}
+
+/* If you want to hide the default H4 styling or reduce spacing: */
+.footer__links h4 {
+  margin: 0; 
+  font-size: 1rem; 
+  font-weight: normal;
+}
+
+/* On smaller screens, stack columns in a single column layout */
+@media (max-width: 768px) {
+  .footer__links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer__links .col {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.footer__bottom {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0.1; /* Tighter spacing if needed */
 }
 
 .hero {
@@ -196,4 +254,24 @@
   .contentGrid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Center the left navbar items */
+.navbar__items--left {
+  display: flex !important;     /* Ensure a flex layout */
+  align-items: center;          /* Vertically center items */
+  gap: 1.5rem;                  /* Adjust spacing between each item */
+  justify-content: center;
+  padding: 0 1.2rem !important; /* Optional padding around the group */
+}
+
+/* Hide the Home link on the homepage */
+body.homepage .navbar__item--home {
+  display: none !important;
+}
+
+/* Optional: Ensure the footer link inherits color and remove underline */
+.footer-center p {
+  display: inline-block;
+  margin: 0 0.3rem; /* small horizontal spacing */
 }

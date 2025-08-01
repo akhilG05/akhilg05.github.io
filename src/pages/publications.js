@@ -11,8 +11,7 @@ const publications = [
     venue: 'Indian Patent Office',
     status: 'Published and Awaiting Examination',
     date: 'December 2024',
-    id: 'Application No. 202441099717',
-    abstract: 'Proposes an autonomous, multi-modal robotic system capable of navigating pipelines, uneven terrain, and liquid mediums for remote inspection and maintenance, with potential use in infrastructure and utility sectors.'
+    id: 'Application No. 202441099717'
   },
   {
     type: 'Conference Paper',
@@ -21,7 +20,8 @@ const publications = [
     venue: 'Eleventh ISSS National Conference on MEMS, Smart Materials, Structures and Systems',
     location: 'Coimbatore, India',
     date: 'December 2023',
-    abstract: 'Proposes a robust, modular experimental framework bridging theoretical CPS concepts with real-world sensor-actuator systems, significantly enhancing hands-on engineering education and research.'
+    paperLink: '/img/ACPS_Lab_Experimental_Framework.pdf',
+    certificateLink: '/img/ISSS_2023_Certificate.pdf'
   }
 ];
 
@@ -47,10 +47,28 @@ export default function Publications() {
               {pub.id && (
                 <p className={styles.id}>{pub.id}</p>
               )}
-              <div className={styles.abstract}>
-                <h3>Abstract</h3>
-                <p>{pub.abstract}</p>
-              </div>
+              {(pub.paperLink || pub.certificateLink) && (
+                <div className={styles.links}>
+                  {pub.paperLink && (
+                    <a
+                      href={pub.paperLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.linkButton}>
+                      View Paper
+                    </a>
+                  )}
+                  {pub.certificateLink && (
+                    <a
+                      href={pub.certificateLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.linkButton}>
+                      View Certificate
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           ))}
         </div>

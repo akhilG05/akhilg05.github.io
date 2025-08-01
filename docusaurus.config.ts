@@ -1,33 +1,21 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Akhilesh Gonabal',
+  tagline: 'Research Assistant & Robotics Engineer',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: 'https://akhilg05.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'https://akhileshgonabal.com',
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'akhilg05', // Usually your GitHub org/user name.
-  projectName: 'akhilg05.github.io', // Usually your repo name.
-  trailingSlash: false, // Ensure URLs work properly
-  deploymentBranch: 'gh-pages', // Deployment branch
+  organizationName: 'akhilg05', // GitHub org/user name.
+  projectName: 'akhilg05.github.io', // Repo name.
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -39,8 +27,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -50,11 +36,8 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -67,79 +50,95 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+
+    // Navbar: No title or logo. All items use position 'left'; custom CSS centers them.
     navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: '/',
+          label: 'Home',
           position: 'left',
-          label: 'Tutorial',
+          className: 'navbar__item--home',
+          activeBaseRegex: '^/$',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          to: '/about',
+          label: 'About me',
+          position: 'left',
+          className: 'navbar__items--left',
+        },
+        {
+          to: '/projects',
+          label: 'Projects',
+          position: 'left',
+          className: 'navbar__items--left',
+        },
+        {
+          to: '/publications',
+          label: 'Publications',
+          position: 'left',
+          className: 'navbar__items--left',
+        },
+        {
+          to: '/contact',
+          label: 'Contact me',
+          position: 'left',
+          className: 'navbar__items--left',
         },
       ],
     },
+
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: '© 2025 Akhilesh Anant Gonabal',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            // If you want the text by itself, you can leave this empty or link to your home page.
           ],
         },
         {
-          title: 'Community',
+          title: 'Built with Docusaurus',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
+            // Another column, or link items if you prefer
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
+
+
+    metadata: [
+      { name: 'keywords', content: 'robotics, research, engineering, automation, cyber-physical systems' },
+      { name: 'description', content: 'Akhilesh Gonabal - Research Assistant at IISc developing bio-inspired robotic systems' },
+      { name: 'author', content: 'Akhilesh Anant Gonabal' },
+      { property: 'og:title', content: 'Akhilesh Gonabal - Robotics Research & Engineering' },
+      { property: 'og:description', content: 'Research Assistant at IISc developing bio-inspired robotic systems.' },
+      { property: 'og:url', content: 'https://akhileshgonabal.com' },
+      { property: 'og:image', content: '/img/og-image.jpg' }, // Update with your OG image as needed
+    ],
+
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.vsDark,
     },
-  } satisfies Preset.ThemeConfig,
+  },
+
+  customFields: {
+    social: {
+      github: 'https://github.com/akhilG05',
+      email: 'akhilesh.gonabal@gmail.com',
+    },
+    enableBlog: false,
+  },
+
+  plugins: [
+    // Additional plugins if required.
+  ],
 };
 
 export default config;

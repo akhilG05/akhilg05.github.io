@@ -10,28 +10,34 @@ export default function Home() {
   return (
     <Layout
       title="Home"
-      description="Akhilesh Gonabal - Research Assistant & Robotics Engineer">
+      description="Akhilesh Gonabal - Roboticist">
       <main className="hero">
         <div className="container">
           <div className="row">
+            {/* Left Column: Welcome Text & CTAs */}
             <div className="col col--6">
-              <h1 className="hero__title">{siteConfig.title}</h1>
+              <h1 className="hero__title">Hello, I'm Akhilesh</h1>
               <p className="hero__subtitle">
-                Research Assistant at IISc developing bio-inspired robotic systems for complex inspection tasks
+                  Engineering Intelligent Systems for a Sustainable World              
               </p>
               <div className="buttons-row">
                 <Link
                   className="button button--primary button--lg"
-                  to="/files/resume.pdf">
+                  to="/img/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   View Resume
                 </Link>
                 <Link
                   className="button button--secondary button--lg"
-                  to="https://github.com/akhilG05">
+                  to="https://github.com/akhilG05"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   GitHub Profile
                 </Link>
               </div>
             </div>
+            {/* Right Column: Illustration */}
             <div className="col col--6">
               <div className="hero__illustration-container">
                 <RoboticIllustration className="hero__illustration" />
