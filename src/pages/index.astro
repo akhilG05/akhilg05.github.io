@@ -23,12 +23,13 @@ const publications = (await getCollection('publications')).sort((a, b) => a.data
         </div>
       </div>
       <div class="hero-visual">
-        <img class="portrait-image" src="/img/profile.png" alt="Akhilesh Gonabal" />
+        <div class="portrait-frame">
+          <img class="portrait-image" src="/img/profile.png" alt="Akhilesh Gonabal" />
+        </div>
         <div class="focus-panel">
           <span>Current focus</span>
           <strong>{profile.currentFocus}</strong>
         </div>
-        <img class="robot-preview" src="/img/Ground.gif" alt="Ground mobility test of a multimodal robot" />
       </div>
     </section>
 
