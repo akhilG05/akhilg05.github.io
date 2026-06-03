@@ -20,6 +20,6 @@ images:
     alt: "Smart city autonomous bot demonstration"
   - src: "/img/smart_city_architecture.jpg"
     alt: "Smart city system architecture"
-featured: true
-order: 3
+featured: false
+order: 7
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Multimodal Mobile Robot"
-period: "2024 - Present"
+period: "2024 - 2025"
 role: "Research Assistant, IISc Bangalore"
 summary: "Autonomous multimodal robot for inspection and surveillance in constrained environments, combining bio-inspired mechanisms, distributed embedded control, perception, and ROS2 teleoperation."
 tags:
@@ -24,6 +24,6 @@ images:
     alt: "Reverse pipe traversal test"
   - src: "/img/Roll.gif"
     alt: "Rolling mode prototype test"
-featured: true
-order: 1
+featured: false
+order: 5
 ---

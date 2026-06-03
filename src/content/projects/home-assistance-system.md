@@ -21,5 +21,5 @@ images:
   - src: "/img/overall2.jpg"
     alt: "Home assistance system overview"
 featured: false
-order: 4
+order: 8
 ---

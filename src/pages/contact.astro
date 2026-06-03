@@ -3,11 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { profile } from '../data/profile';
 ---
 
-<BaseLayout title="Contact" description={`Contact ${profile.shortName} for robotics, embedded systems, and research collaborations.`}>
+<BaseLayout title="Contact" description={`Contact ${profile.shortName} for medical navigation, robotics, embedded systems, and research collaborations.`}>
   <main id="main" class="page-main">
     <section class="section-wrap page-hero contact-hero reveal">
       <p class="section-kicker">Contact</p>
-      <h1>For research collaborations, robotics work, or engineering conversations.</h1>
+      <h1>For medical navigation, robotics, embedded systems, or engineering conversations.</h1>
       <p>{profile.location}</p>
       <div class="contact-actions">
         <a class="button button-primary" href={`mailto:${profile.email}`}>{profile.email}</a>

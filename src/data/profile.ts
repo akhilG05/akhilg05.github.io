@@ -1,18 +1,18 @@
 export const profile = {
   name: 'Akhilesh Anant Gonabal',
   shortName: 'Akhilesh Gonabal',
-  role: 'Robotics researcher and engineer',
-  currentTitle: 'Research Assistant at IISc Bangalore',
+  role: 'Medical navigation software engineer',
+  currentTitle: 'Software Engineer Level 2 at Capla India',
   location: 'Bangalore, India',
   email: 'akhilesh.gonabal@gmail.com',
   github: 'https://github.com/akhilG05',
   resume: '/img/resume.pdf',
   summary:
-    'I work across robotics, embedded systems, and cyber-physical automation, building intelligent machines that can operate in constrained, real-world environments.',
+    'I build medical navigation and robotics software across Qt/QML, C++, imaging, tracking, registration, and hardware-integrated workflows.',
   currentFocus:
-    'Bio-inspired multimodal mobile robots for inspection and surveillance in constrained spaces.',
+    'Cranial, spine, and robotic exoscope workflows that connect medical imaging, optical tracking, registration, hand-eye calibration, instrument calibration, and real-time visualization.',
   bio:
-    'My work spans embedded control, robotics software, sensing, automation, and cyber-physical systems. I have built SCADA automation systems, IoT-based infrastructure prototypes, lab-scale cyber-physical platforms, and multimodal robotic systems. I am especially interested in robotics that can make inspection, agriculture, greentech, and sustainable infrastructure more efficient and scalable.',
+    'My work sits at the intersection of medical imaging, robotics, embedded systems, and product-grade software. I currently develop hardware-connected surgical navigation workflows at CAPLA, including patient data import, multi-view visualization, point and surface registration, tracked-tool navigation, robotic exoscope integration, instrument calibration, recovery, persistence, and deployment support. Earlier work includes multimodal mobile robots, applied cyber-physical systems, IoT infrastructure prototypes, and SCADA automation.',
   education: [
     {
       degree: 'B.Tech in Electrical and Electronics Engineering',
@@ -24,9 +24,17 @@ export const profile = {
   ],
   experience: [
     {
+      title: 'Software Engineer Level 2',
+      organization: 'Capla India Private Limited',
+      period: 'Sep 2025 - Present',
+      summary:
+        'Building medical navigation software for cranial, spine, and robotic exoscope workflows using Qt/QML, C++, ImFusion SDK, Atracsys tracking, CUDA/OpenCV, and workflow-focused persistence.',
+      logo: '/img/capla-logo.svg',
+    },
+    {
       title: 'Research Assistant',
       organization: 'IISc Bangalore',
-      period: '2024 - Present',
+      period: '2024 - 2025',
       summary: 'Developing multimodal mobile robotic systems for constrained-environment inspection.',
       logo: '/img/iisc-logo.png',
     },
@@ -47,20 +55,20 @@ export const profile = {
   ],
   skills: [
     {
-      category: 'Robotics and autonomy',
-      items: ['ROS', 'ROS2', 'Gazebo', 'Navigation', 'Teleoperation', 'Perception'],
+      category: 'Medical navigation and imaging',
+      items: ['ImFusion SDK', 'DICOM/NIfTI', 'MPR visualization', 'Point registration', 'Surface registration', 'Image fusion'],
     },
     {
-      category: 'Embedded and hardware',
-      items: ['STM32', 'ESP32', 'Arduino', 'Raspberry Pi', 'Jetson Nano', 'CAN', 'MQTT'],
+      category: 'Tracking, robotics, and hardware',
+      items: ['Atracsys SpryTrack', 'Robotic exoscope', 'Hand-eye calibration', 'Instrument calibration', 'ROS2', 'Jetson', 'CAN', 'MQTT'],
     },
     {
       category: 'Programming',
-      items: ['Python', 'C', 'C++', 'JavaScript', 'MATLAB', 'LaTeX'],
+      items: ['C++17', 'Qt/QML', 'Python', 'JavaScript', 'MATLAB', 'LaTeX'],
     },
     {
-      category: 'Design and simulation',
-      items: ['SolidWorks', 'Fusion 360', 'Simulink', 'LabVIEW'],
+      category: 'Systems and deployment',
+      items: ['Linux', 'CMake', 'SQLite', 'Docker', 'CUDA/OpenCV', 'Git', 'SolidWorks'],
     },
   ],
 } as const;

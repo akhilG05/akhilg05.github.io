@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Capla logo mark</title>
+  <desc id="desc">A compact CAPLA monogram for the portfolio timeline.</desc>
+  <rect width="96" height="96" rx="18" fill="#fffdf8"/>
+  <path d="M48 14 78 31v34L48 82 18 65V31z" fill="#111512"/>
+  <path d="M48 23 68 35v25L48 72 28 60V35z" fill="#56c8c9"/>
+  <path d="M48 32 59 39v18L48 64 37 57V39z" fill="#fffdf8"/>
+  <path d="M48 39 53 42v11L48 56 43 53V42z" fill="#e4572e"/>
+</svg>
