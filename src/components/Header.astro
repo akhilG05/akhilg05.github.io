@@ -17,17 +17,73 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     <span class="brand-mark">AG</span>
     <span>{profile.shortName}</span>
   </a>
-  <nav class="site-nav" aria-label="Main navigation">
-    {
-      navItems.map((item) => {
-        const itemPath = item.href.replace(/\/$/, '') || '/';
-        const isActive = itemPath === '/' ? currentPath === '/' : currentPath.startsWith(itemPath);
-        return (
-          <a href={item.href} aria-current={isActive ? 'page' : undefined}>
-            {item.label}
-          </a>
-        );
-      })
-    }
-  </nav>
+  <div class="header-actions">
+    <nav class="site-nav" aria-label="Main navigation">
+      {
+        navItems.map((item) => {
+          const itemPath = item.href.replace(/\/$/, '') || '/';
+          const isActive = itemPath === '/' ? currentPath === '/' : currentPath.startsWith(itemPath);
+          return (
+            <a href={item.href} aria-current={isActive ? 'page' : undefined}>
+              {item.label}
+            </a>
+          );
+        })
+      }
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme" aria-pressed="false">
+      <span class="theme-toggle__icon" aria-hidden="true"></span>
+      <span class="theme-toggle__label">Theme</span>
+    </button>
+  </div>
 </header>
+
+<script is:inline>
+  (() => {
+    const storageKey = 'theme-preference';
+    const root = document.documentElement;
+    const button = document.querySelector('[data-theme-toggle]');
+    const label = button?.querySelector('.theme-toggle__label');
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+    const getStoredTheme = () => {
+      try {
+        const theme = localStorage.getItem(storageKey);
+        return theme === 'light' || theme === 'dark' ? theme : null;
+      } catch {
+        return null;
+      }
+    };
+
+    const getResolvedTheme = () => getStoredTheme() ?? (mediaQuery.matches ? 'dark' : 'light');
+
+    const applyTheme = (theme) => {
+      root.dataset.theme = theme;
+      if (button) {
+        button.setAttribute('aria-pressed', String(theme === 'dark'));
+        button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      }
+      if (label) {
+        label.textContent = theme === 'dark' ? 'Dark' : 'Light';
+      }
+    };
+
+    applyTheme(getResolvedTheme());
+
+    button?.addEventListener('click', () => {
+      const nextTheme = getResolvedTheme() === 'dark' ? 'light' : 'dark';
+      try {
+        localStorage.setItem(storageKey, nextTheme);
+      } catch {
+        // The visual toggle still works for this page if persistence fails.
+      }
+      applyTheme(nextTheme);
+    });
+
+    mediaQuery.addEventListener('change', () => {
+      if (!getStoredTheme()) {
+        applyTheme(getResolvedTheme());
+      }
+    });
+  })();
+</script>

@@ -21,11 +21,29 @@ const ogImage = new URL('/img/profile.png', site);
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f4f7f5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111512" media="(prefers-color-scheme: dark)" />
     <title>{pageTitle}</title>
+    <script is:inline>
+      (() => {
+        try {
+          const theme = localStorage.getItem('theme-preference');
+          if (theme === 'light' || theme === 'dark') {
+            document.documentElement.dataset.theme = theme;
+          }
+        } catch {
+          // Keep the system preference if storage is unavailable.
+        }
+      })();
+    </script>
     <meta name="description" content={description} />
     <meta name="author" content={profile.name} />
     <meta name="keywords" content="robotics, embedded systems, automation, cyber-physical systems, ROS, inspection robotics" />
     <link rel="canonical" href={canonical.toString()} />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon-light.svg?v=2" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon-dark.svg?v=2" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg?v=2" />
     <link rel="icon" href="/img/favicon.ico" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
