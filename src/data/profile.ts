@@ -8,7 +8,7 @@ export const profile = {
   github: 'https://github.com/akhilG05',
   resume: '/img/resume.pdf',
   summary:
-    'I build medical navigation and robotics software across Qt/QML, C++, imaging, tracking, registration, and hardware-integrated workflows.',
+    'I work across medical navigation, robotics, embedded systems, and cyber-physical automation, building software for intelligent machines that operate reliably in precise, real-world environments.',
   currentFocus:
     'Cranial, spine, and robotic exoscope workflows that connect medical imaging, optical tracking, registration, hand-eye calibration, instrument calibration, and real-time visualization.',
   bio:
