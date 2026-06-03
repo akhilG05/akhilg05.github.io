@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+
+const publications = (await getCollection('publications')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Publications" description="Publications, patents, and research outputs by Akhilesh Gonabal.">
+  <main id="main" class="page-main">
+    <section class="section-wrap page-hero reveal">
+      <p class="section-kicker">Publications</p>
+      <h1>Research outputs, patents, and conference work.</h1>
+      <p>Selected work connected to robotics, cyber-physical systems, and lab-scale engineering platforms.</p>
+    </section>
+
+    <section class="section-wrap publication-list reveal">
+      {publications.map((publication) => <PublicationItem publication={publication} />)}
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import PublicationItem from '../components/PublicationItem.astro';
+import { profile } from '../data/profile';
+
+const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
+const featuredProjects = projects.filter((project) => project.data.featured).slice(0, 3);
+const publications = (await getCollection('publications')).sort((a, b) => a.data.order - b.data.order).slice(0, 2);
+---
+
+<BaseLayout title="Home" description={profile.summary}>
+  <main id="main">
+    <section class="hero-section section-wrap reveal">
+      <div class="hero-copy">
+        <p class="section-kicker">{profile.currentTitle}</p>
+        <h1>{profile.name}</h1>
+        <p class="hero-lede">{profile.summary}</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/projects">View Projects</a>
+          <a class="button button-secondary" href={profile.resume}>Resume</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img class="portrait-image" src="/img/profile.png" alt="Akhilesh Gonabal" />
+        <div class="focus-panel">
+          <span>Current focus</span>
+          <strong>{profile.currentFocus}</strong>
+        </div>
+        <img class="robot-preview" src="/img/Ground.gif" alt="Ground mobility test of a multimodal robot" />
+      </div>
+    </section>
+
+    <section class="section-wrap split-section reveal">
+      <div>
+        <p class="section-kicker">Research direction</p>
+        <h2>Robotics for constrained, physical environments.</h2>
+      </div>
+      <p>{profile.bio}</p>
+    </section>
+
+    <section class="section-wrap reveal">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Selected work</p>
+          <h2>Projects</h2>
+        </div>
+        <a class="text-link" href="/projects">All projects</a>
+      </div>
+      <div class="project-grid">
+        {featuredProjects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </section>
+
+    <section class="section-wrap two-column reveal">
+      <div>
+        <p class="section-kicker">Publications and patents</p>
+        <h2>Recent outputs</h2>
+        <a class="text-link" href="/publications">View all publications</a>
+      </div>
+      <div class="stack-list">
+        {publications.map((publication) => <PublicationItem publication={publication} compact />)}
+      </div>
+    </section>
+  </main>
+</BaseLayout>

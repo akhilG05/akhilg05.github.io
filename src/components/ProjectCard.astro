@@ -1,0 +1,49 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+  variant?: 'compact' | 'full';
+}
+
+const { project, variant = 'compact' } = Astro.props;
+const { data } = project;
+const image = data.images[0];
+const highlights = variant === 'compact' ? data.highlights.slice(0, 2) : data.highlights;
+---
+
+<article id={variant === 'full' ? project.id : undefined} class={`project-card project-card--${variant}`}>
+  {
+    image && (
+      <a class="project-media" href={`/projects#${project.id}`} aria-label={`View ${data.title}`}>
+        <img src={image.src} alt={image.alt} loading="lazy" />
+      </a>
+    )
+  }
+  <div class="project-body">
+    <p class="meta-line">{data.period}{data.role ? ` / ${data.role}` : ''}</p>
+    {variant === 'compact' ? <h3><a href={`/projects#${project.id}`}>{data.title}</a></h3> : <h2>{data.title}</h2>}
+    <p>{data.summary}</p>
+    {
+      highlights.length > 0 && (
+        <ul class="clean-list highlight-list">
+          {highlights.map((highlight) => <li>{highlight}</li>)}
+        </ul>
+      )
+    }
+    {
+      data.tags.length > 0 && (
+        <div class="tag-list" aria-label={`${data.title} technologies`}>
+          {data.tags.map((tag) => <span>{tag}</span>)}
+        </div>
+      )
+    }
+    {
+      variant === 'full' && data.images.length > 1 && (
+        <div class="media-strip" aria-label={`${data.title} images`}>
+          {data.images.slice(1).map((item) => <img src={item.src} alt={item.alt} loading="lazy" />)}
+        </div>
+      )
+    }
+  </div>
+</article>

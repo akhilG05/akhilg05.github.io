@@ -1,0 +1,14 @@
+---
+import { profile } from '../data/profile';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <p>Copyright {year} {profile.name}</p>
+  <div class="footer-links" aria-label="Footer links">
+    <a href={`mailto:${profile.email}`}>Email</a>
+    <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+    <a href={profile.resume}>Resume</a>
+  </div>
+</footer>

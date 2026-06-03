@@ -1,41 +1,25 @@
-# Website
+# Akhilesh Gonabal Portfolio
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Personal portfolio built with [Astro](https://astro.build/). The site is static, content-first, and outputs to `build/`.
 
-### Installation
+## Development
 
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
+```bash
+npm install
+npm run dev
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+## Build
 
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+npm run check
+npm run build
 ```
 
-Not using SSH:
+## Deployment
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+The Astro migration is published from the `astro-migration` branch through GitHub Actions. GitHub Pages should use **GitHub Actions** as the source, and the custom domain is stored in `static/CNAME`.
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## Content
+
+Projects live in `src/content/projects/` and publications live in `src/content/publications/`. Profile, experience, education, and skills are in `src/data/profile.ts`.

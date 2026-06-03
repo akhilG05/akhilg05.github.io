@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { profile } from '../data/profile';
+---
+
+<BaseLayout title="About" description={`About ${profile.shortName}, ${profile.role}.`}>
+  <main id="main" class="page-main">
+    <section class="section-wrap page-hero reveal">
+      <p class="section-kicker">About</p>
+      <h1>Engineer at the edge of robotics, embedded systems, and automation.</h1>
+      <p>{profile.bio}</p>
+    </section>
+
+    <section class="section-wrap two-column reveal">
+      <div>
+        <p class="section-kicker">Experience</p>
+        <h2>Professional journey</h2>
+      </div>
+      <div class="timeline-list">
+        {
+          profile.experience.map((item) => (
+            <article class="timeline-item">
+              <img src={item.logo} alt={`${item.organization} logo`} loading="lazy" />
+              <div>
+                <p class="meta-line">{item.period}</p>
+                <h3>{item.title}</h3>
+                <p class="muted">{item.organization}</p>
+                <p>{item.summary}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section-wrap two-column reveal">
+      <div>
+        <p class="section-kicker">Education</p>
+        <h2>Academic foundation</h2>
+      </div>
+      <div class="timeline-list">
+        {
+          profile.education.map((item) => (
+            <article class="timeline-item">
+              <img src={item.logo} alt={`${item.institution} logo`} loading="lazy" />
+              <div>
+                <p class="meta-line">{item.period}</p>
+                <h3>{item.degree}</h3>
+                <p class="muted">{item.institution}</p>
+                <p>{item.detail}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section-wrap reveal">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">Technical range</p>
+          <h2>Skills</h2>
+        </div>
+      </div>
+      <div class="skill-grid">
+        {
+          profile.skills.map((group) => (
+            <article class="skill-card">
+              <h3>{group.category}</h3>
+              <div class="tag-list">
+                {group.items.map((item) => <span>{item}</span>)}
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

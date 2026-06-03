@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  publication: CollectionEntry<'publications'>;
+  compact?: boolean;
+}
+
+const { publication, compact = false } = Astro.props;
+const { data } = publication;
+---
+
+<article class={compact ? 'publication-item publication-item--compact' : 'publication-item'}>
+  <p class="meta-line">{data.type} / {data.date}</p>
+  <h3>{data.title}</h3>
+  <p>{data.authors}</p>
+  <p class="muted">
+    {data.venue}{data.location ? ` / ${data.location}` : ''}
+  </p>
+  {data.status && <p class="status-line">{data.status}</p>}
+  {data.identifier && <p class="identifier-line">{data.identifier}</p>}
+  {
+    !compact && data.links.length > 0 && (
+      <div class="inline-links">
+        {data.links.map((link) => (
+          <a href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>
+            {link.label}
+          </a>
+        ))}
+      </div>
+    )
+  }
+</article>
