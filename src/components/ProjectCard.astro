@@ -21,7 +21,7 @@ const highlights = variant === 'compact' ? data.highlights.slice(0, 2) : data.hi
     )
   }
   <div class="project-body">
-    <p class="meta-line">{data.period}{data.role ? ` / ${data.role}` : ''}</p>
+    <p class="meta-line">{data.period}{data.role ? ` | ${data.role}` : ''}</p>
     {variant === 'compact' ? <h3><a href={`/projects#${project.id}`}>{data.title}</a></h3> : <h2>{data.title}</h2>}
     <p>{data.summary}</p>
     {
