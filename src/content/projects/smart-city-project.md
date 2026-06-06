@@ -14,10 +14,10 @@ highlights:
   - "Implemented Dijkstra-based path planning for dynamic shortest-path navigation."
   - "Integrated I2C, serial communication, and MySQL-backed sensor data handling."
 images:
-  - src: "/img/smart_city.JPEG"
-    alt: "Smart city prototype model"
   - src: "/img/smartcity2.gif"
     alt: "Smart city autonomous bot demonstration"
+  - src: "/img/smart_city.JPEG"
+    alt: "Smart city prototype model"
   - src: "/img/smart_city_architecture.jpg"
     alt: "Smart city system architecture"
 featured: false
