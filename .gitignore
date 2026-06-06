@@ -10,6 +10,7 @@
 
 # Local tooling
 .claude/
+.secrets/
 
 # Misc
 .DS_Store

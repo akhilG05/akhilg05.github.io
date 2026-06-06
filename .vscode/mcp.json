@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "overleaf": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@mjyoo2/overleaf-mcp"],
+      "env": {
+        "OVERLEAF_PROJECT_ID": "6a242ba5bc37ec8bae487cf4",
+        "OVERLEAF_GIT_TOKEN_FILE": "${workspaceFolder}/.secrets/overleaf-git-token.txt"
+      }
+    }
+  }
+}
