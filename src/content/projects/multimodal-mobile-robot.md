@@ -24,6 +24,6 @@ images:
     alt: "Reverse pipe traversal test"
   - src: "/img/Roll.gif"
     alt: "Rolling mode prototype test"
-featured: false
-order: 5
+featured: true
+order: 1
 ---

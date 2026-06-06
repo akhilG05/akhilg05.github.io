@@ -335,8 +335,7 @@ p {
 
 .hero-actions,
 .contact-actions,
-.inline-links,
-.footer-links {
+.inline-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -407,21 +406,26 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: var(--color-ink);
-  color: var(--color-surface);
-  padding: 1.1rem;
+  background: color-mix(in srgb, var(--color-surface) 90%, transparent);
+  color: var(--color-text);
+  padding: 0.95rem;
 }
 
 .focus-panel span {
-  color: var(--color-gold);
-  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+  color: var(--color-accent-strong);
+  font-size: 0.72rem;
   font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .focus-panel strong {
-  font-family: var(--font-display);
-  font-size: clamp(1.08rem, 2vw, 1.35rem);
-  line-height: 1.1;
+  max-width: 42ch;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.45;
 }
 
 .split-section,
@@ -520,6 +524,18 @@ p {
   padding: 1.25rem;
 }
 
+.publication-item {
+  padding: 1rem 1.1rem;
+}
+
+.publication-venue span {
+  display: block;
+}
+
+.publication-location {
+  margin-top: 0.1rem;
+}
+
 .project-card--full .project-body {
   padding: 1.75rem;
 }
@@ -600,12 +616,38 @@ p {
   gap: 1rem;
 }
 
+.publication-list {
+  gap: 0.85rem;
+}
+
 .publication-item h3 {
   max-width: 46rem;
+  margin-bottom: 0.4rem;
+}
+
+.publication-item p {
+  margin-bottom: 0.42rem;
+  line-height: 1.5;
+}
+
+.publication-item .meta-line {
+  margin-bottom: 0.45rem;
+  line-height: 1.35;
 }
 
 .publication-item--compact {
-  padding: 1rem 1.1rem;
+  padding: 1rem 1.1rem 0.9rem;
+}
+
+.publication-item--compact > :last-child {
+  margin-bottom: 0;
+}
+
+.publication-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+  margin: 0.35rem 0 0.55rem;
 }
 
 .muted,
@@ -616,8 +658,12 @@ p {
 
 .status-line,
 .identifier-line {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0;
   font-weight: 700;
+}
+
+.inline-links {
+  margin-top: 0.55rem;
 }
 
 .inline-links a {
@@ -659,13 +705,16 @@ p {
 
 .site-footer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
   width: min(var(--max-width), calc(100% - 2rem));
   margin: auto auto 0;
   border-top: 1px solid var(--color-line);
   padding: 1.4rem 0 2rem;
+  text-align: left;
 }
 
 .site-footer p {
@@ -673,14 +722,73 @@ p {
   font-size: 0.9rem;
 }
 
-.footer-links a {
-  color: var(--color-muted);
-  font-weight: 700;
-  text-decoration: none;
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.7rem;
 }
 
-.footer-links a:hover {
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.05rem;
+  height: 2.05rem;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  color: var(--color-muted);
+  background: var(--color-surface-strong);
+  text-decoration: none;
+  transition: color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.social-link:hover {
   color: var(--color-ink);
+  border-color: var(--color-accent-strong);
+  transform: translateY(-1px);
+}
+
+.social-link:focus-visible {
+  outline: 2px solid var(--color-accent-strong);
+  outline-offset: 2px;
+}
+
+.social-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.contact-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.6rem;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  color: var(--color-ink);
+  background: var(--color-surface-strong);
+  text-decoration: none;
+  font-weight: 700;
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.contact-social-link:hover {
+  border-color: var(--color-accent-strong);
+  background: var(--color-button-secondary-bg);
+  transform: translateY(-1px);
+}
+
+.contact-social-link:focus-visible {
+  outline: 2px solid var(--color-accent-strong);
+  outline-offset: 2px;
+}
+
+.contact-social-link svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--color-accent-strong);
 }
 
 .reveal {
@@ -738,7 +846,6 @@ p {
   }
 
   .site-header,
-  .site-footer,
   .section-heading {
     align-items: flex-start;
     flex-direction: column;

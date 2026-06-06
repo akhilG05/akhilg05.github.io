@@ -1,21 +1,20 @@
 ---
-title: "CAPLA Robotic Exoscope"
+title: "CAPLA Medical Technology Software"
 period: "2025 - Present"
 role: "Software Engineer Level 2, Capla India"
-summary: "Host-agnostic robotic exoscope add-on for intraoperative positioning, connecting a collaborative robot with tracking, hand-eye calibration, visible-feed preview, follow control, and optional 3D robot/goal visualization."
+summary: "Current software engineering work in CAPLA's medical-technology ecosystem, involving embedded software, surgical planning, navigation, visualization, and robotics-adjacent product areas at a public, non-confidential level."
 tags:
-  - C++17
+  - C++
   - Qt/QML
-  - ImFusion Robotics
-  - Huayan Robotics
-  - Optical tracking
-  - Hand-eye calibration
-  - Surgical robotics
+  - Embedded Linux
+  - NVIDIA Jetson
+  - Computer vision
+  - Sensor fusion
 highlights:
-  - "Worked with a reusable add-on architecture that keeps robot connection, kinematics, hand-eye calibration, follow control, and QML workflow logic isolated from the host application."
-  - "Defined host integration through focused adapter interfaces for tracking, configuration, audit logging, visible-light video, and 3D visualization instead of coupling the add-on to host internals."
-  - "Supported safety-oriented workflow boundaries such as shared-camera arbitration, transactional calibration sessions, cancellable robot motion, and explicit initialization/deinitialization around the ImFusion framework."
-  - "Connected robotic control concepts with surgical navigation primitives: tracked instruments, robot reference markers, goal transforms, visual feed preview, and robot/goal visualization."
+  - "Develop C++/Qt/QML application features for embedded medical-technology software on Linux and Jetson-class platforms."
+  - "Work with hardware-connected software concepts including imaging/tracking interfaces, communication paths, testing, and real-time debugging."
+  - "Apply robotics, computer vision, sensor fusion, and embedded systems background to surgical planning, navigation, visualization, and robotics-adjacent workflows."
+  - "Public description is limited to company-published product areas and job-description-level responsibilities, excluding proprietary architecture, source code, internal data, and implementation details."
 featured: true
-order: 2
+order: 3
 ---

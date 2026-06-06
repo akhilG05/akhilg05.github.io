@@ -11,7 +11,8 @@ interface Props {
 
 const { title, description = profile.summary } = Astro.props;
 const site = Astro.site ?? new URL('https://akhileshgonabal.com');
-const pageTitle = title === 'Home' ? `${profile.shortName} | ${profile.role}` : `${title} | ${profile.shortName}`;
+const tabBrand = 'AG';
+const pageTitle = title === 'Home' ? `${tabBrand} | ${profile.role}` : `${title} | ${tabBrand}`;
 const canonical = new URL(Astro.url.pathname, site);
 const ogImage = new URL('/img/profile.png', site);
 ---
@@ -39,7 +40,7 @@ const ogImage = new URL('/img/profile.png', site);
     </script>
     <meta name="description" content={description} />
     <meta name="author" content={profile.name} />
-    <meta name="keywords" content="medical navigation, surgical navigation, robotics, embedded systems, medical imaging, Qt QML, C++, ImFusion, optical tracking" />
+    <meta name="keywords" content="robotics, embedded systems, cyber-physical systems, automation, medical technology software, C++, Qt QML, NVIDIA Jetson, computer vision" />
     <link rel="canonical" href={canonical.toString()} />
     <link rel="icon" type="image/svg+xml" href="/img/favicon-light.svg?v=2" media="(prefers-color-scheme: light)" />
     <link rel="icon" type="image/svg+xml" href="/img/favicon-dark.svg?v=2" media="(prefers-color-scheme: dark)" />

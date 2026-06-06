@@ -6,12 +6,12 @@ import ProjectCard from '../components/ProjectCard.astro';
 const projects = (await getCollection('projects')).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<BaseLayout title="Projects" description="Robotics, embedded systems, IoT, and cyber-physical systems projects by Akhilesh Gonabal.">
+<BaseLayout title="Projects" description="Robotics research, embedded systems, automation, and cyber-physical systems projects by Akhilesh Gonabal.">
   <main id="main" class="page-main">
     <section class="section-wrap page-hero reveal">
       <p class="section-kicker">Projects</p>
-      <h1>Selected medical navigation systems, robotics projects, and cyber-physical builds.</h1>
-      <p>Work across surgical navigation, robotic exoscope workflows, medical imaging, optical tracking, registration, instrument calibration, multimodal robotics, and applied cyber-physical systems.</p>
+      <h1>Robotics research, embedded systems, and cyber-physical builds.</h1>
+      <p>Work across multimodal mobile robots, ROS2 teleoperation, embedded control, sensor-actuator platforms, automation, and selected current embedded medical-technology software described at a public, non-confidential level.</p>
     </section>
 
     <section class="section-wrap project-list reveal">

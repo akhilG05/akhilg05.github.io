@@ -6,8 +6,10 @@
 
 # Generated files
 .astro
-.docusaurus
 .cache-loader
+
+# Local tooling
+.claude/
 
 # Misc
 .DS_Store
@@ -21,3 +23,8 @@ yarn-debug.log*
 yarn-error.log*
 
 .superpowers/
+
+# Sensitive local documents
+/*.pdf
+Appointment Letter*.pdf
+*Capla*Appointment*.pdf

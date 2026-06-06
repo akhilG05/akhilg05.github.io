@@ -21,6 +21,6 @@ images:
     alt: "ACPS cloud dashboard interface"
   - src: "/img/implemented_architecture.png"
     alt: "Implemented ACPS architecture diagram"
-featured: false
-order: 6
+featured: true
+order: 2
 ---

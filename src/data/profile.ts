@@ -1,24 +1,25 @@
 export const profile = {
   name: 'Akhilesh Anant Gonabal',
   shortName: 'Akhilesh Gonabal',
-  role: 'Medical navigation software engineer',
-  currentTitle: 'Software Engineer Level 2 at Capla India',
+  role: 'Robotics and embedded systems engineer',
+  currentTitle: 'Robotics, cyber-physical systems, and automation',
   location: 'Bangalore, India',
   email: 'akhilesh.gonabal@gmail.com',
   github: 'https://github.com/akhilG05',
+  linkedin: 'https://www.linkedin.com/in/akhilesh-gonabal/',
   resume: '/img/resume.pdf',
   summary:
-    'I work across robotics, embedded systems, cyber-physical automation, and medical navigation, building software for intelligent machines that operate reliably in precise, real-world environments.',
+    'I build robotics and cyber-physical systems for real-world use, drawing on experience from power-distribution automation, academic research at NITK and IISc, and embedded software development for medical-technology products.',
   currentFocus:
-    'Cranial, spine, and robotic exoscope workflows that connect medical imaging, optical tracking, registration, hand-eye calibration, instrument calibration, and real-time visualization.',
+    'Currently applying robotics and embedded-systems experience to medical-technology software at CAPLA, focused on surgical planning, navigation, and visualization at public scope.',
   bio:
-    'My work sits at the intersection of medical imaging, robotics, embedded systems, and product-grade software. I currently develop hardware-connected surgical navigation workflows at CAPLA, including patient data import, multi-view visualization, point and surface registration, tracked-tool navigation, robotic exoscope integration, instrument calibration, recovery, persistence, and deployment support. Earlier work includes multimodal mobile robots, applied cyber-physical systems, IoT infrastructure prototypes, and SCADA automation.',
+    'My path spans industrial automation and research-led robotics. After starting in SCADA-based power distribution automation, I moved into cyber-physical systems research at NITK, where I helped build a lab-scale ACPS platform using STM32/ESP32 sensor-actuator nodes and edge-fog-cloud architecture. At IISc, I worked on multimodal autonomous mobile robots for constrained inspection, contributing across mechanical design, embedded control, and ROS2-based autonomy. I now apply that foundation to embedded medical-technology software at CAPLA, and I remain focused on building robust robotics for agriculture, sustainability, and other high-impact domains.',
   education: [
     {
       degree: 'B.Tech in Electrical and Electronics Engineering',
       institution: 'National Institute of Technology Karnataka, Surathkal',
       period: '2016 - 2020',
-      detail: 'CGPA: 7.63. Awarded merit scholarship for academic excellence by Government of Karnataka.',
+      detail: 'Awarded merit scholarship for academic excellence by Government of Karnataka.',
       logo: '/img/nitk-logo.png',
     },
   ],
@@ -28,39 +29,42 @@ export const profile = {
       organization: 'Capla India Private Limited',
       period: 'Sep 2025 - Present',
       summary:
-        'Building medical navigation software for cranial, spine, and robotic exoscope workflows using Qt/QML, C++, ImFusion SDK, Atracsys tracking, CUDA/OpenCV, and workflow-focused persistence.',
-      logo: '/img/capla-logo.svg',
+        'Contributing to embedded medical-technology software using C++/Qt on Linux and Jetson-class platforms, including hardware-connected workflows, testing, debugging, and product documentation.',
+      logo: '/img/capla-logo.png',
     },
     {
       title: 'Research Assistant',
       organization: 'IISc Bangalore',
       period: '2024 - 2025',
-      summary: 'Developing multimodal mobile robotic systems for constrained-environment inspection.',
+      summary:
+        'Developed a multimodal autonomous mobile robot for constrained-environment inspection, contributing to distributed embedded architecture, CAN communication, and ROS2-based navigation workflows.',
       logo: '/img/iisc-logo.png',
     },
     {
       title: 'Junior Research Fellow',
       organization: 'NITK Surathkal',
       period: '2022 - 2024',
-      summary: 'Established an ACPS lab platform and developed virtual lab workflows.',
+      summary:
+        'Built an applied cyber-physical systems lab platform with STM32/ESP32 sensor-actuator nodes integrated across edge, fog, and cloud layers for education and research.',
       logo: '/img/csd-logo.jpg',
     },
     {
       title: 'Lead Engineer',
       organization: 'TATA Power Company Ltd',
       period: '2020 - 2022',
-      summary: 'Managed SCADA-based power distribution automation systems.',
+      summary:
+        'Worked on SCADA-driven power-distribution automation using IEC 60870 and Modbus, while supporting field monitoring, LoRa-based visibility for unautomated substations, and process automation.',
       logo: '/img/tata-logo.png',
     },
   ],
   skills: [
     {
-      category: 'Medical navigation and imaging',
-      items: ['ImFusion SDK', 'DICOM/NIfTI', 'MPR visualization', 'Point registration', 'Surface registration', 'Image fusion'],
+      category: 'Robotics and autonomy',
+      items: ['ROS2', 'Teleoperation', 'Mobile robots', 'Simulation', 'Robot mechanisms', 'Robot calibration', 'Computer vision', 'Sensor fusion'],
     },
     {
-      category: 'Tracking, robotics, and hardware',
-      items: ['Atracsys SpryTrack', 'Robotic exoscope', 'Hand-eye calibration', 'Instrument calibration', 'ROS2', 'Jetson', 'CAN', 'MQTT'],
+      category: 'Embedded and cyber-physical systems',
+      items: ['Jetson', 'STM32', 'ESP32', 'CAN', 'MQTT', 'Sensor-actuator nodes', 'Edge-fog-cloud systems', 'Imaging hardware interfaces', 'Real-time testing'],
     },
     {
       category: 'Programming',
@@ -68,7 +72,7 @@ export const profile = {
     },
     {
       category: 'Systems and deployment',
-      items: ['Linux', 'CMake', 'SQLite', 'Docker', 'CUDA/OpenCV', 'Git', 'SolidWorks'],
+      items: ['Linux', 'NVIDIA Jetson', 'CMake', 'Docker', 'Git', 'System integration', 'SolidWorks', 'Embedded software integration'],
     },
   ],
 } as const;
