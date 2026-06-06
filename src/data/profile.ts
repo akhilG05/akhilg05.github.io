@@ -9,11 +9,11 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/akhilesh-gonabal/',
   resume: '/img/resume.pdf',
   summary:
-    'I build robotics and cyber-physical systems for real-world use, drawing on experience from power-distribution automation, academic research at NITK and IISc, and embedded software development for medical-technology products.',
+    'I build robotics, embedded systems, and cyber-physical automation for real-world use, drawing on experience from power-distribution automation, academic research at NITK and IISc, and Linux-based product software.',
   currentFocus:
-    'Currently applying robotics and embedded-systems experience to medical-technology software at CAPLA, focused on surgical planning, navigation, and visualization at public scope.',
+    'Currently applying robotics and embedded-systems experience to Linux-based product software at CAPLA, focused on hardware-integrated application workflows at public scope.',
   bio:
-    'My path spans industrial automation and research-led robotics. After starting in SCADA-based power distribution automation, I moved into cyber-physical systems research at NITK, where I helped build a lab-scale ACPS platform using STM32/ESP32 sensor-actuator nodes and edge-fog-cloud architecture. At IISc, I worked on multimodal autonomous mobile robots for constrained inspection, contributing across mechanical design, embedded control, and ROS2-based autonomy. I now apply that foundation to embedded medical-technology software at CAPLA, and I remain focused on building robust robotics for agriculture, sustainability, and other high-impact domains.',
+    'My path spans industrial automation and research-led robotics. After starting in SCADA-based power distribution automation, I moved into cyber-physical systems research at NITK, where I helped build a lab-scale ACPS platform using STM32/ESP32 sensor-actuator nodes and edge-fog-cloud architecture. At IISc, I worked on multimodal autonomous mobile robots for constrained inspection, contributing across mechanical design, embedded control, and ROS2-based autonomy. I now apply that foundation to embedded product software at CAPLA, and I remain focused on building robust robotics for agriculture, sustainability, and other high-impact domains.',
   education: [
     {
       degree: 'B.Tech in Electrical and Electronics Engineering',
@@ -29,7 +29,7 @@ export const profile = {
       organization: 'Capla India Private Limited',
       period: 'Sep 2025 - Present',
       summary:
-        'Contributing to embedded medical-technology software using C++/Qt on Linux and Jetson-class platforms, including hardware-connected workflows, testing, debugging, and product documentation.',
+        'Contributing to Linux-based embedded product software using C++/Qt on Jetson-class platforms, including hardware-connected workflows, testing, debugging, and product documentation.',
       logo: '/img/capla-logo.png',
     },
     {
