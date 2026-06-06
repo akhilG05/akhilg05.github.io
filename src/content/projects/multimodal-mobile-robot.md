@@ -16,7 +16,7 @@ highlights:
   - "Implemented CAN communication between microcontrollers and the main compute board for real-time coordination."
   - "Built ROS2 WiFi teleoperation workflows for remote testing and field-oriented validation."
 images:
-  - src: "/img/Ground.gif"
+  - src: "/img/ground-robot.webp"
     alt: "Ground mobility test of the multimodal robot"
   - src: "/img/Pipe_Forward.gif"
     alt: "Forward pipe traversal test"
