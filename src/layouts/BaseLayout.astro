@@ -14,6 +14,7 @@ const site = Astro.site ?? new URL('https://akhileshgonabal.com');
 const pageTitle = title === 'Home' ? `${profile.shortName} | ${profile.role}` : `${title} | ${profile.shortName}`;
 const canonical = new URL(Astro.url.pathname, site);
 const ogImage = new URL('/img/profile.png', site);
+const faviconVersion = '5';
 ---
 
 <!doctype html>
@@ -41,9 +42,10 @@ const ogImage = new URL('/img/profile.png', site);
     <meta name="author" content={profile.name} />
     <meta name="keywords" content="robotics, embedded systems, cyber-physical systems, automation, Linux product software, C++, Qt QML, NVIDIA Jetson, computer vision" />
     <link rel="canonical" href={canonical.toString()} />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon-light.svg?v=4" media="(prefers-color-scheme: light)" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon-dark.svg?v=4" media="(prefers-color-scheme: dark)" />
-    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg?v=4" />
+    <link rel="icon" href={`/favicon.ico?v=${faviconVersion}`} sizes="any" />
+    <link rel="icon" type="image/png" sizes="512x512" href={`/favicon-512.png?v=${faviconVersion}`} />
+    <link rel="icon" type="image/svg+xml" href={`/favicon.svg?v=${faviconVersion}`} />
+    <link rel="apple-touch-icon" href={`/favicon-512.png?v=${faviconVersion}`} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
