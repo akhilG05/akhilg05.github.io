@@ -12,7 +12,7 @@ const shouldOpenInNewTab = (href: string) => href.startsWith('http') || href.toL
 ---
 
 <article class={compact ? 'publication-item publication-item--compact' : 'publication-item'}>
-  <p class="meta-line">{data.type} / {data.date}</p>
+  <p class="meta-line">{data.type} | {data.date}</p>
   <h3>{data.title}</h3>
   <p>{data.authors}</p>
   <p class="muted publication-venue">
